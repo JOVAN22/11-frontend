@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Task Eleven - JS Hover</title>
+</head>
+<body>
+
+    <h1>Hover over the image to make it vanish!</h1>
+
+    <img id="toggleImage" 
+         src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=500" 
+         alt="A cute cat" 
+         style="width:300px; transition: opacity 0.3s;">
+
+    <script>
+        const img = document.getElementById('toggleImage');
+
+        // When mouse enters the image area
+        img.addEventListener('mouseenter', function() {
+            img.style.opacity = '0';
+        });
+
+        // When mouse leaves the image area
+        img.addEventListener('mouseleave', function() {
+            img.style.opacity = '1';
+        });
+    </script>
+
+</body>
+</html>
